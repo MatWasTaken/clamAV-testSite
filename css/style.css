@@ -1,0 +1,40 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+form {
+  display: flex;
+  margin: 10px;
+  justify-content: flex-end;
+}
+nav {
+  background-color: rgb(233, 233, 233);
+  display: flex;
+  justify-content: space-around;
+  border-bottom: solid 1px;
+}
+
+input {
+  cursor: pointer;
+  height: 50px;
+  width: 200px;
+  font-size: 1.5rem;
+}
+
+main {
+    margin: 3rem;
+    margin-top: 0;
+    font-size: 1.2rem;
+}
+
+h1, p{
+  margin: 0;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.scan, .scanc {
+  padding: 5px;
+  border: dotted 2px;
+}
