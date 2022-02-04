@@ -1,14 +1,14 @@
 <?php
 //shell_exec('curl -i -F file=@$file localhost:9000/scan');
 
-$folderPath  = "/home/mchabrier/Documents/my_ClamAV-Project/upload";
-$allFiles = scandir($folderPath);
+$filePath  = "/home/mchabrier/Documents/my_ClamAV-Project/upload";
+$allFiles = scandir($filePath);
 $files = array_diff($allFiles, array('.', '..'));
 
 foreach ($files as $file) {
-    $filePath  = "$folderPath/$file";
+    $filePath  = "/home/mchabrier/Documents/my_ClamAV-Project/upload/$file";
 
-    $ch = curl_init('clamav.atgpedi.net:9000/scan');
+    $ch = curl_init('172.16.1.100:9000/scan');
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
     curl_setopt($ch, CURLOPT_POST, 1);
     curl_setopt($ch, CURLOPT_HEADER, 1);
